@@ -570,6 +570,9 @@ footer{
         font-size: 25px;
     }
     /* first page image */
+    .s-place{
+        min-height: 80vh;
+    }
     .h-pic{
         width: 100%;
         height: 70%;
@@ -644,7 +647,8 @@ footer{
     }
     /* this for the video */
      .video-page{
-        min-height: 100vh;
+        min-height: 75vh;
+        gap: 0;
      }  
      .v-holder{
          width: 250px;
@@ -662,12 +666,12 @@ footer{
         padding-top:30px ;
     }
     .course-box{
-        width: 90%;
+        width: 80%;
     }
     /* this for the tool image holder */
     .tool-image {
-        width: 100%;
-        height: 50vh;
+        height: 30vh;
+        padding: 0;
     }
     /* this for the contact */
     .contact-us{
@@ -675,6 +679,14 @@ footer{
     }
     .cont-holder{
         width: 90%;
+        min-height: 60vh;
+    }
+    .cont-pic {
+        width: 100%;
+    }
+    .c-pic > img{
+        width: 100%;
+        height: 380px;
     }
     /* footer */
     .navigation {

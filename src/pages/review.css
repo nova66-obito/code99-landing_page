@@ -198,9 +198,20 @@ html {
   .student_says h3{
      font-size: 20px;
   }
-  .swiper-slide{
+  .swiper_container{
+    padding: 0;
+  }
+  .swiper-slide {
     width: 230px !important;
     height: 300px !important;  
+    scale: 1;
+ }
+ .swiper-3d .swiper-wrapper {
+   transform-style:unset;
+   scale: 0.8;
+ }
+ .swiper-3d .swiper-slide-prev{
+   scale: 1;
  }
  .icon-s > h1{
     font-size: 20px;
