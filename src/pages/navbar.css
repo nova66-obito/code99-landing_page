@@ -1,0 +1,157 @@
+/* this for the nav bar */
+nav{
+    min-height: 10vh;
+    background: var(--prime);
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    /* box-shadow: 0 4px 5px black; */
+    z-index: 999;
+}
+.n-cover{
+    justify-content:space-around;
+}
+/* this for the logo */
+.nav-logo > img{
+  width: 70px;
+  height: 70px;
+}
+.logo-txt{
+    flex-direction: column;
+}
+.cl1{
+  color: var(--bg);
+  box-shadow: -2px 2px 5px black;
+  background:black;
+}
+.logo-txt > h3{
+    color: var(--title);
+   font-weight: bolder;
+   margin: 0;
+}
+.logo-txt > small{
+    font-weight: bolder;
+}
+/* this for the text in the div */
+nav > div a{
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+    padding: 7px 15px;
+    border-radius: 5px;
+}
+nav > div a:hover{
+    color: var(--bg);
+    transition: all 0.3s;
+   background:var(--title) ;
+   box-shadow: -2px 2px 5px black;
+}
+/* this for the link */
+.nav-block1{
+    width: 16%;
+}
+.nav-block3{
+    width: 16%;
+}
+.nav-block2{
+    width: 60%;
+    display: flex;
+    gap:15px;
+}
+.nav-block2 > button {
+  display: none;
+}
+/* thsi fort the button */
+.nav-block button{
+    border-radius:30px;
+    padding: 5px 20px;
+    background: var(--title);
+    color: var(--bg);
+    font-weight: bolder;
+    text-transform: capitalize;
+    border: 1px solid var(--title);
+    box-shadow: -2px 3px 5px black;
+}
+.nav-block3 > h1{
+    display: none;
+  }
+/* this for the media screen */
+@media (max-width: 1025px) and  (min-width:700px) {
+    nav > div a{
+        font-size: 12px;
+        padding:5px 10px;
+    }   
+    .nav-block2{
+        gap: 5px;
+    }
+    .nav-block3 > button{
+      font-size: 15px;
+      padding: 5px 10px;
+    }
+}
+
+@media (max-width: 800px) and  (min-width:300px) {
+  .nav-block2{ 
+    position:fixed;
+    background:white;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    flex-direction: column;
+    width: 80%;
+    height: 100vh;
+    top:0px;
+    box-shadow: 0 -2px 5px black;
+    left: -1000px;
+    visibility: hidden;
+  }
+  /* this for the click animation */
+  nav > .active{
+    visibility:visible;
+     left: -10px;
+     animation: move 1 0.5s forwards linear;
+  }
+  @keyframes move{
+    from{
+        left: -1000px;
+        opacity: 1;
+    }
+    to{
+        left: -10px;
+    }
+    
+  }
+  nav > div a{
+    font-size: 15px;
+  }
+  .nav-block1{
+    justify-content:flex-start;
+  }
+  .n-cover{
+    justify-content: space-between;
+  }
+  /* this for the text and font size curreting */
+  .nav-block1{
+    width: 50%;
+  }
+  .nav-block2 > button{
+    display: block;
+  }
+  .logo-txt > h3{
+    font-size: 30px;
+  } 
+  .nav-block3 > button{
+    display: none;
+  }
+  .nav-block3 > h1{
+    display: block;
+    background:var(--title);
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-content:center;
+    color: var(--prime);
+    border-radius: 20px;
+    box-shadow: -2px 2px 4px black;
+  }
+}

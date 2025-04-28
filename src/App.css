@@ -1,0 +1,25 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+:root{
+  --prime:#F3FEE5;
+  --box:#1A1F36;
+  --title:#90D916;
+  --text:#F7F7F7;
+  --bg:white;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title{
+   font-weight: bolder;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.full{
+  min-height: 100vh;
+}
