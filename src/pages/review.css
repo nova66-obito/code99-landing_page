@@ -192,6 +192,11 @@ html {
   .container {
     padding: 0;
   }
+  .heading{
+    padding: 0;
+    position: relative;
+    top: 35px;
+  }
   .student_says p{
      font-size: 15px;
   }
