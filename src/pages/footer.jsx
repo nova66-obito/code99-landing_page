@@ -1,6 +1,6 @@
 import React from "react";
 import { useState,useEffect } from "react";
-import { FaLocationDot } from "react-icons/fa6";
+import { IoLocationSharp } from "react-icons/io5";
 import { CgMail } from "react-icons/cg";
 import { IoCall } from "react-icons/io5";
 import { FaFacebook } from "react-icons/fa";
@@ -38,25 +38,25 @@ export default function Footer(){
                   </div>
                   <div className="details">
                      <b>navigation</b>
-                      <a href="#Home">home</a>
+                      <a href="#">home</a>
                       <a href="#Home">about</a>
-                      <a href="#Home">course</a>
-                      <a href="#Home">blog</a>
-                      <a href="#Home">contact</a>
+                      <a href="#course">course</a>
+                      <a href="#video">blog</a>
+                      <a href="#contact">contact</a>
                   </div>
                   <div className="details">
                      <b>social</b>
-                      <a href="#Home"><h6><FaFacebook /></h6>  facebook</a>
-                      <a href="#Home"><h6><FaInstagram /></h6>  instagram</a>
-                      <a href="#Home"><h6><FaYoutube /></h6> youtube</a>
-                      <a href="#Home"><h6><FaLinkedin /></h6> linkidin</a>
-                      <a href="#Home"><h6><FaSquareXTwitter /></h6> twitter</a>
+                      <a href="#Home"><FaFacebook className="socail"/><h6>facebook</h6></a>
+                      <a href="#Home"><FaInstagram className="socail"/><h6>facebook</h6></a>
+                      <a href="#Home"><FaYoutube className="socail"/><h6>youtube</h6></a>
+                      <a href="#Home"><FaLinkedin className="socail"/><h6>linkedin</h6></a>
+                      <a href="#Home"><FaSquareXTwitter className="socail"/><h6>twitter</h6></a>
                   </div>
-                  <div className="details">
+                  <div className="details address">
                      <b>get in touch</b>
-                     <a href=""><h6><FaLocationDot /></h6> No 16, 1st floor, Sarathy Nagar, Opp To Vijaya Nagar, Velachery, Chennai - 600 042.No 16, 1st floor, Sarathy Nagar, Opp To Vijaya Nagar, Velachery, Chennai - 600 042.</a>
-                     <a href=""><h6><CgMail /></h6> code99itacademy@gmail.com</a>
-                     <a href=""><h6><IoCall /></h6>63 74 51 07 54</a>
+                     <a href=""><h5><IoLocationSharp/></h5><h6> No 16, 1st floor, Sarathy Nagar, Opp To Vijaya Nagar, Velachery, Chennai - 600 042.No 16, 1st floor, Sarathy Nagar, Opp To Vijaya Nagar, Velachery, Chennai - 600 042.</h6></a>
+                     <a href=""><CgMail className="socail"/> code99itacademy@gmail.com</a>
+                     <a href=""><IoCall className="socail"/>63 74 51 07 54</a>
                   </div>
                   <div className="details locat">
                      <b>reach us</b>

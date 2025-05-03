@@ -18,143 +18,173 @@ import std16 from "../images/place16.png"
 import std17 from "../images/place17.png"
 import std18 from "../images/place18.png"
 import std19 from "../images/place19.png"
-import std20 from "../images/place 20.png"
+import std20 from "../images/place20.png"
 import std21 from "../images/place21.png"
 import std22 from "../images/place22.png"
+import std23 from '../images/place23.png'
 export default function Placement() {
     const details = [
         {
             image: std1,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "Bhahirathan M",
+            company: "Minar Soft",
+            course: "Junior Software Developer",
+            c_logo:""
         },
         {
             image: std2,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "Monika .G",
+            company: "staar homes",
+            course: "Digital marketing Executive",
+             c_logo:""
         },
         {
             image: std3,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "Tharun .S",
+            company: "Code99 IT Academy",
+            course: "marketing analyst",
+             c_logo:""
         },
         {
             image: std4,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "Mohamed Sheik Abdul Khader .A ",
+            company: "digidaly",
+            course: "google ads",
+             c_logo:""
         },
         {
-            image: std5,
-            nam: "****",
-            company: "not no",
-            course: "course"
+             image: std5,
+             nam: "Mathan Karthik .A ",
+             company: "maynee",
+             course: "ads manger",
+              c_logo:""
         },
         {
             image: std6,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "ASIYA RYHANA .A",
+            company: "UltraGITS",
+            course: "Digital Marketing Executive",
+             c_logo:""
         },
         {
             image: std7,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "Arivarasu .T",
+            company: "cloverbridge technologies pvt ltd.",
+            course: "python developer",
+             c_logo:""
         },
         {
             image: std8,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "Geetha .S",
+            company: "Kriha IT Solutions",
+            course: "Front-End developer",
+             c_logo:""
         },
         {
             image: std9,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "Ashwini M",
+            company: "calsoft",
+            course: "full stack Python",
+             c_logo:""
         },
         {
             image: std10,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "Balaji .M",
+            company: "Aspire systems",
+            course: "Software Trainee",
+             c_logo:""
         },
         {
             image: std11,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "Harish Ragavendira .M",
+            company: "izeon innovative",
+            course: "web Development Trainee",
+             c_logo:""
         },
         {
             image: std12,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "Hariharan .S",
+            company: "The Atom",
+            course: "Full stack developer",
+             c_logo:""
         },
         {
             image: std13,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "Prabakaran .S",
+            company: "Shortfundly",
+            course: "Web Developer",
+             c_logo:""
         },
         {
             image: std14,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "Ramji.R",
+            company: "Northern IT Limited Services",
+            course: "Customer Care Executive",
+             c_logo:""
         },
         {
             image: std15,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "Sriram.S",
+            company: "Code99 IT Academy",
+            course: "UI/UX design",
+             c_logo:""
         },
         {
             image: std16,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "Sneka.M",
+            company: "DHL Information Technology Services",
+            course: "Software Developer",
+             c_logo:""
         },
         {
             image: std17,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "Mohamed Inamul Haq",
+            company: "Minar Soft",
+            course: "Junior Software Developer",
+             c_logo:""
         },
         {
             image: std18,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "Faaik.A.K",
+            company: "HCLTechnologies",
+            course: "Arabic process associate",
+             c_logo:""
         },
         {
             image: std19,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "Gowtham.R",
+            company: "zidio development",
+            course: "full stack web developer",
+             c_logo:""
         },
         {
             image: std20,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "Shenbaga Devi.C",
+            company: "The Pomegranates",
+            course: "Google Ads Specialist",
+             c_logo:""
         },
         {
             image: std21,
-            nam: "****",
-            company: "not no",
-            course: "course"
+            nam: "Joel Alan.J",
+            company: "Aditya Birla Capital",
+            course: "Digital marketing executive",
+             c_logo:""
         },
         {
             image: std22,
-            nam: "****",
-            company: "not no",
-            course: "course"
-        }
+            nam: "Moorthy Sivabalan.B",
+            company: "CognitiveMobile Technology Pvt. Ltd.",
+            course: "Associate Software Engineer",
+            c_logo:""
+        },
+        {
+            image: std23,
+            nam: "Mohammed Farook Imran.T.N",
+            company: "Minar Soft",
+            course: "Software developer role",
+             c_logo:""
+        },
     ]
     return (
         <>
@@ -171,8 +201,9 @@ export default function Placement() {
                                 </div>
                             </div>
                             <div className="p-details center">
-                                <b>arivarasu T</b>
-                                <p>role:python developer</p>
+                                <b>{item.nam}</b>
+                                <p>role:{item.course}</p>
+                                <small>company:{item.company}</small>
                             </div>
                         </div>
                     </>

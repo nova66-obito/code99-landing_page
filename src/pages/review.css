@@ -1,13 +1,6 @@
 html {
     scroll-behavior: smooth;
   }
-  
-  
-  
-  
-  
-  
-  
   .container {
     max-width: 154rem!important;
     padding: 4rem 1rem;
@@ -19,6 +12,7 @@ html {
     padding: 1rem 0;
     font-weight: bolder;
     text-align: center;
+    font-family: var(--heading);
   }
   .swiper {
     height: 100vh!important;
@@ -195,16 +189,13 @@ html {
   .heading{
     padding: 0;
     position: relative;
-    top: 35px;
+    top: 30px;
   }
   .student_says p{
      font-size: 15px;
   }
   .student_says h3{
      font-size: 20px;
-  }
-  .swiper_container{
-    padding: 0;
   }
   .swiper-slide {
     width: 230px !important;
@@ -222,7 +213,8 @@ html {
     font-size: 20px;
  }
  .swiper_container {
-  height: 30rem !important;
+  height: 27rem !important;
+  transform: translate3d(0px, 0px, 0px) !important;
 }
 .slider-controler .slider-arrow {
   width: 100px;
@@ -234,6 +226,12 @@ html {
 .student_says p{
   font-size: 20px;
   padding: 10px !important;
+}
+.container {
+  padding: 1rem 0.5rem ;
+}
+.swiper{
+ height: 73vh !important; 
 }
 .swiper-slide{
   height: 350px !important;  

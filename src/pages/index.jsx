@@ -15,8 +15,15 @@ import w5 from '../images/why 5.png';
 import vid1 from "../images/vid1.png";
 import vid2 from "../images/vid2.png";
 import vid3 from "../images/vid3.png";
+import vid4 from "../images/vid4.png";
 import vid5 from "../images/vid5.png";
 import vid6 from "../images/vid6.png";
+import vid7 from "../images/vid7.png";
+import vid8 from "../images/vid8.png";
+import vid9 from "../images/vid9.png";
+import vid10 from "../images/vid10.png";
+import vid11 from "../images/vid11.png";
+import vid12 from "../images/vid12.png";
 // this for the batch pic
 import Batch1 from "../images/batch1.png";
 import Batch2 from "../images/Batch-2.png";
@@ -33,19 +40,21 @@ import std7 from "../images/place7.png"
 import std8 from "../images/place8.png"
 import std9 from "../images/place9.png"
 import std10 from "../images/place10.png"
+// this for the company logo
+
 // slider
 import Carousel from 'react-bootstrap/Carousel';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { IoStar } from "react-icons/io5";
+// icons
 import { FaLessThan } from "react-icons/fa";
-import { FaGreaterThan } from "react-icons/fa";
 import Tool from "../images/tools.png";
 import Bg from "../images/back-ground.png";
 import Course from "./course";
 import Review from "./slider";
 import Model from "../images/model4.png";
+import Uper from "../images/uper.png";
 export default function Land_page() {
     const [Hover, setHover] = useState(false);
     const settings = {
@@ -151,7 +160,7 @@ export default function Land_page() {
             url: "#"
         },
         {
-            pic: "none",
+            pic: vid4,
             url: "#"
         },
         {
@@ -162,7 +171,47 @@ export default function Land_page() {
             pic: vid6,
             url: "#"
         },
+        {
+            pic: vid7,
+            url: "#"
+        },
+        {
+            pic: vid8,
+            url: "#"
+        },
+        {
+            pic: vid9,
+            url: "#"
+        },
+        {
+            pic: vid10,
+            url: "#"
+        },
+        {
+            pic: vid11,
+            url: "#"
+        },
+        {
+            pic: vid12,
+            url: "#"
+        },
     ]
+    // scroll event for the icon
+    const [view, setView] = useState(false);
+    const [height, setHeight] = useState(0);
+     useEffect(() => {
+        const onScroll = () => setHeight(window.scrollY);
+        window.addEventListener('scroll', onScroll);
+        return () => window.removeEventListener('scroll', onScroll);
+      }, []);
+      useEffect(() => {
+        if (height > 40) {
+          setView(true)
+        } 
+        else{
+          setView(false)            
+        }
+      },[height]);
     return (
         <>
             <main>
@@ -171,7 +220,7 @@ export default function Land_page() {
                     {/* this for the home page */}
                     <div className="home center">
                         <div className="h-txt center">
-                            <h1>India's 1'st Institute to Provide Free Training</h1>
+                            <h1>India's 1st Institute to Provide Free Training</h1>
                         </div>
                         <Carousel data-bs-theme="dark">
                             <Carousel.Item>
@@ -218,6 +267,10 @@ export default function Land_page() {
                     </div>
                     {/* this for the student placement*/}
                     <div id="placement" className="s-place title center">
+                        {/* this for the icon */}
+                        <div className={`w-icon ${view ? "view" :'' }`}>
+                            <img src={Uper} alt="icon" />
+                        </div>
                         <h1>student placement</h1>
                         <div className="place-cover center">
                             <div className={`center pl-cover ${Hover ? 'anime-stop' : null}`} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} >

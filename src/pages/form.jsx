@@ -83,7 +83,7 @@ export default function Form_card() {
                             value={select_val}
                             onChange={(e) => setChoose(select_val)}
                         />
-                        <label htmlFor="name" className={`lab ${select_val ? 'top' : ""}`}>enter your name</label>
+                        <label htmlFor="name" className={`lab ${select_val ? 'top' : ""}`}>select your course</label>
                         {chooseError && <p>{chooseError}</p>}
                         <select value={select_val} onChange={sel_change}>
                             <option value=""></option>

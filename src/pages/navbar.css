@@ -28,6 +28,7 @@ nav{
     color: var(--title);
    font-weight: bolder;
    margin: 0;
+   font-family: "Volte W03 Semibold";
 }
 .logo-txt > small{
     font-weight: bolder;

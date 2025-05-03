@@ -19,7 +19,7 @@ main{
 }
 .h-txt > h1{
     font-size: 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: var(--heading);
 }
 .carousel-indicators {
     bottom: -50px;
@@ -28,6 +28,7 @@ main{
    text-align: center;
    font-weight: bold;
    color: var(--prime);
+   font-family: var(--heading);
 }
 .carousel-indicators [data-bs-target] {
     width: 6px;
@@ -47,6 +48,9 @@ main{
  .s-place{
     flex-direction: column;
     gap: 20px;
+ }
+ .s-place > h1{
+    font-family: var(--heading);
  }
  .place-cover {
    height: 65vh;
@@ -121,11 +125,54 @@ main{
    text-align: center;
    flex-direction: column;
 }
+.p-details p
+{
+    margin: 0;
+    font-size: 14px;
+    font-weight:500;
+}
+.p-details > small{
+    font-size: 10px;
+    font-weight: normal;
+}
 .p-details > b{
     color: var(--prime);
 }
  /* --------------------------------------------- */
-
+/* icon */
+.w-icon{
+    display: grid;
+    place-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: green;
+    position: fixed;
+    top:520px;
+    right: 20px;
+    z-index: 99;
+    cursor: pointer;
+    visibility: hidden;
+}
+.view{
+    visibility: visible;
+    animation: zoom 1 0.5s forwards;
+}
+@keyframes zoom {
+    from{
+        scale: 0;
+        opacity: 0;
+    }
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
+.w-icon:hover{
+    background:rgb(33, 62, 33);
+    scale: 0.9;
+    transition: all 0.4s;
+}
  /* this for the placement */
 .s-place{
     min-height: 90vh;
@@ -136,6 +183,9 @@ main{
     flex-direction: column;
     gap: 20px;
     min-height: 60vh;
+}
+.story > h1{
+  font-family: var(--heading);
 }
 .s-cover{
     width: 100%;
@@ -170,6 +220,7 @@ main{
 }
 .sub-pic > h3{
     align-self: flex-start;
+    font-family: var(--heading);
 }
 .min-holder{
     width: 90%;
@@ -241,6 +292,9 @@ button > h4{
   flex-direction: column;
   gap:20px;
 }
+.choose > h1{
+    font-family: var(--heading);
+}
 /* card */
 .c-box{
     overflow: hidden;
@@ -260,7 +314,7 @@ button > h4{
 .c-holder {
     gap:20px;
     flex-direction: column;
-    width: 28%;
+    width: 350px;
 }
 .c-txt{
     flex-direction: column;
@@ -269,13 +323,13 @@ button > h4{
 }
 .c-pic{
     width: 100%;
-    height: 200px;
+    height:100%;
     overflow: hidden;
 }
 .c-pic > img{
     width: 100%;
-    height: 240px;
-    object-fit: cover;
+    height: 180px;
+    object-fit: fill;
 }
 /* this is overall the box */
 .choose-cover{
@@ -291,21 +345,24 @@ button > h4{
 .video-page{
     flex-direction: column;
     gap:30px;
-    min-height: 100vh;
+    min-height: 80vh;
+}
+.video-page > h1{
+    font-family: var(--heading);
 }
 .b-cover{
-    height: 400px;
+    height: 500px;
     width: 100%;
     overflow: scroll;
     gap: 10px;
     padding: 20px;
     justify-content: flex-start;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(13, 1fr);
     gap: 20px;
 }
 .video-page > h1{
-    padding-top:60px;
+    padding-top:90px;
 }
 .b-cover::-webkit-scrollbar{
     display: none;
@@ -313,14 +370,14 @@ button > h4{
 .v-holder{
    width: 300px;
    height: 450px;
-   animation: scl 4s infinite ease-in;
+   animation: scl 15s infinite ease-in;
 }
 @keyframes scl {
     from{
-        transform: translateX(0%);
+        transform: translateX(200px);
     }
     to{
-       transform: translateX(-50%);
+       transform: translateX(-2500px);
     }
 }
 .v-holder > a{
@@ -335,6 +392,9 @@ button > h4{
 .course{
     gap:20px;
     flex-direction: column;
+}
+.course > h1{
+    font-family: var(--heading);
 }
 /*course cover */
 .course-cover{
@@ -482,7 +542,7 @@ select > option{
     background: var(--box);
 }
 .f-btn{
-    padding-bottom:10px;
+    padding-bottom:25px;
 }
 .f-btn > button{
    border: none;
@@ -519,16 +579,18 @@ footer{
     background:var(--box);
     color: var(--prime);
 }
-.details{
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-    min-height: 300px;
-    padding: 10px;
-}
 .navigation {
     padding: 10px;
-    gap:10px
+    gap:10px;
+    flex-wrap: wrap;
+    min-height: 52vh;
+    width: 100%;
+    align-items: flex-start;
+}
+.details{
+    width: 180px;
+    height: 300px;
+    padding: 10px;
 }
 .details > a{
   text-decoration: none;
@@ -542,17 +604,23 @@ footer{
 .details > b{
   color: var(--title);
 }
+.address{
+    width: 300px;
+}
 /*this for the locatuion*/
 .locat{
-    width: 35%;
-    padding: 20px;
+    width: 320px;
+    padding: 10px;
+}
+/* this for the icon */
+.socail
+{
+  font-size: 20px;
 }
 .locat > iframe{
     width: 100%;
-    height: 150px;
-    border-radius: 10px;
-    margin-top: 20px;
-    border: 2px solid white;
+    height: 180px;
+    margin-top: 5px;
 }
 /* this for the logo */
 .code {
@@ -606,7 +674,7 @@ footer{
     }
     /* first page image */
     .s-place{
-        min-height: 80vh;
+        min-height: 70vh;
     }
     .h-pic{
         width: 100%;
@@ -618,7 +686,7 @@ footer{
     /* ----------------------------------------- */
     .place-card{
         min-width: 200px;
-        height: 300px;
+        height: 260px;
     }
     .place-cover {
         height: 50vh;
@@ -629,8 +697,8 @@ footer{
         flex-direction: column;
     }
     .main-pic > .pic-holder {
-        height:190px;
-        width: 90%;
+        height:250px;
+        width: 75%;
     }
     .s-cover > .pic-box {
         width: 90%;
@@ -669,7 +737,7 @@ footer{
         min-height: 230px;
     }
     .c-pic{
-        height: 100px;
+        height:100%;
     }
     .c-pic > img{
         height: 80px;
@@ -724,9 +792,10 @@ footer{
         flex-direction: column;
     }
     .details{
-        width: 90%;
-        min-height:auto;
-        padding: 10px;
+        width: 300px;
+        height:220px;
+        padding: 20px 0;
+        background-color: red;
     }
     .text {
         -webkit-text-stroke: 0.5px white;
