@@ -58,7 +58,7 @@ nav > div a:hover{
     display: flex;
     gap:15px;
 }
-.nav-block2 > button {
+.nav-block2 > button ,.nav-block2 > span {
   display: none;
 }
 /* thsi fort the button */
@@ -70,7 +70,14 @@ nav > div a:hover{
     font-weight: bolder;
     text-transform: capitalize;
     border: 1px solid var(--title);
-    box-shadow: -2px 3px 5px black;
+}
+.nav-block > span{
+  background-color: var(--title);
+  padding: 5px;
+  border-radius: 50%;
+  color: var(--prime);
+  position: relative;
+  right: 10px;
 }
 .nav-block3 > h1{
     display: none;
@@ -130,18 +137,22 @@ nav > div a:hover{
   .n-cover{
     justify-content: space-between;
   }
+
   /* this for the text and font size curreting */
   .nav-block1{
     width: 50%;
   }
-  .nav-block2 > button{
+  .nav-block2 > button ,.nav-block2 > span{
     display: block;
+    right: -120px;
+    top:-41px;
   }
   .logo-txt > h3{
     font-size: 30px;
   } 
-  .nav-block3 > button{
+  .nav-block3 > button , .nav-block3 >span{
     display: none;
+
   }
   .nav-block3 > h1{
     display: block;

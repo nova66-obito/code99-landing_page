@@ -143,7 +143,7 @@ main{
 }
 /* this for the side pic */
 .s-cover > .pic-box{
-    width:46%;
+    width:45%;
     height:350px;
 }
 .slick-prev:before, .slick-next:before {
@@ -156,10 +156,12 @@ main{
     width: 80%;
     height: 300px;
     overflow: hidden;
+    background-color:grey;
+    border-radius: 20px;
 }
 .pic-holder > img{
     width: 100%;
-    height: 100%;
+    height:100%;
 }
 /* this for sub-pic */
 .sub-pic{
@@ -180,10 +182,13 @@ main{
 .min-card{
     width: 100px;
     height: 120px;
+    background: gray;
+    border-radius: 10px;
 }
 .min-card > img{
     width: 100%;
     height: 100%;
+    object-fit: fill;
 }
 /* this for the button run */
 .btn-run{
@@ -286,18 +291,21 @@ button > h4{
 .video-page{
     flex-direction: column;
     gap:30px;
-    min-height: 120vh;
+    min-height: 100vh;
 }
 .b-cover{
-    min-height: 350px;
+    height: 400px;
     width: 100%;
     overflow: scroll;
-    gap: 20px;
+    gap: 10px;
     padding: 20px;
     justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 20px;
 }
 .video-page > h1{
-    padding-top:90px;
+    padding-top:60px;
 }
 .b-cover::-webkit-scrollbar{
     display: none;
@@ -305,13 +313,21 @@ button > h4{
 .v-holder{
    width: 300px;
    height: 450px;
-   overflow: hidden;
+   animation: scl 4s infinite ease-in;
 }
-.b-cover > a{
+@keyframes scl {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+       transform: translateX(-50%);
+    }
+}
+.v-holder > a{
     text-decoration: none;
 }
-.v-holder > img{
-    width: 100%;
+.v-holder > a > img{
+    width:100%;
     height: 100%;
     object-fit: cover;
 }
@@ -417,67 +433,85 @@ button > h4{
 form{
     display: flex;
     flex-direction: column;
-    gap:30px;
+    gap:10px;
 }
 .value{
     position: relative;
 }
-.value > input ,.in-select > input ,.value > textarea{
+.value > input , textarea{
     width: 100%;
-    padding: 10px;
-    background: transparent;
     border: 2px solid white;
-    outline: none;
-    border-radius: 5px;
-    resize: none;
-    color: white;
-}
-/* this for the label */
-.in-select > select{
-    width: 10%;
-    position: absolute;
-    right: 10px;
-    padding: 10px;
-    top:2px;
+    padding: 7px;
     background: transparent;
     outline: none;
+    color: white;
+    resize: none;
+    margin: 5px 0;
+}
+.value > .lab{
+   position: absolute;
+   left: 10px;
+   top:15px;
+   background: var(--box);
+   font-size: 13px; 
+}
+.value > input:focus ~ .lab ,textarea:focus ~ .lab {
+  top:-5px;
+  transition: all 0.3s;
+}
+.top{
+    top:-5px !important;
+}
+.value > p{
+  font-size: 13px;
+  color: red;
+  margin: 0;
+}
+ select{
+    width: 5%;
+    padding: 5px;
+    position: absolute;
+    top:3px;
+    right: 5px;
+    background: transparent;
     border: none;
-    color: var(--prime);
+    color: white;
+    outline: none;
 }
 select > option{
     background: var(--box);
 }
-.value > label , .in-select > label{
-   position: absolute;
-   left: 10px;
-   top:14px;
-   font-size: 13px;
-   background:var(--box);
-}
-/* this for the tet area */
-.value > input:focus ~ label , .in-select > input:focus ~ label , textarea:focus ~ label{
-    top:-10px;
-    transition: all 0.3s ease-in-out;
-}
-.sel-up > label , .up-name > label , .up-phone > label , .area > label{
-    top: -10px;
-}
-/* for the button */
-.f-btn {
-    padding-bottom:20px ;
+.f-btn{
+    padding-bottom:10px;
 }
 .f-btn > button{
-    padding:5px 30px;
-    border: 1p solid var(--prime);
-    border-radius: 30px;
-    background-color: var(--title);
-    color: var(--prime);
-    font-weight: bold;
+   border: none;
+   padding: 3px 25px;
+   border-radius: 20px;
+   background: var(--title);
+   color: var(--prime);
+   text-transform: uppercase;
+   font-weight: bolder;    
 }
- .f-btn > button:last-child{
-    padding:5px 10px;
-    border-radius: 50%;
- }
+/* this for the success */
+.success{
+    width: 85%;
+    background: var(--title);
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 3px 2px 5px black;
+    animation: scal 2s 1 forwards;
+}
+@keyframes scal {
+    from{
+       scale: 0;
+       opacity: 0; 
+    }
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
 /* thid for the footer */
 footer{
     min-height: 70vh;
@@ -503,7 +537,6 @@ footer{
   margin-top: 10px;
 }
 .details > a:hover{
-    text-decoration: underline;
     background:rgb(164, 160, 160,0.4);
 }
 .details > b{
@@ -536,19 +569,21 @@ footer{
     font-family: Arial, Helvetica, sans-serif;
     -webkit-text-stroke: 2px white;
     color: transparent;
-    background-image: url(../images/wave.svg);
+    background: url("../images//wave.svg");
     background-clip: text;
-    background-repeat: no-repeat;
     background-size: cover;
-    background-position:10% -35%;
+    background-position: -3% 0%;
     padding: 0;
     margin: 0;
+    opacity: 0.7;
   }
-  .text.animate {
-    opacity: 1;
-    background-position:10% 15%;
+  .act{
+     background-image: url(../images/wave.svg);
+     background-position:10% 15%;
+     transition: all 1s;
+     animation: up 1 2s 2s forwards;
+     opacity: 1;
   }
-  
   .line{
     width: 100%;
     height: 2px;
@@ -748,7 +783,7 @@ footer{
         min-height: 220px;
     }
     .choose-cover {
-        min-height: 120vh;
+        min-height: 70vh;
     }
     /* this for the video */
     .v-holder{
@@ -776,6 +811,9 @@ footer{
     .details{
         width: 90%;
         min-height:auto;
+    }
+    .swiper{
+        height: 75vh !important;
     }
 
 }

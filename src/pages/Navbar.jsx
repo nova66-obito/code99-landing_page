@@ -55,10 +55,13 @@ let clck = (call) => {
                        <a href="#contact"  onClick={() => clck("4")} className={`${show2 == 'four' ? "cl1" : null }`}><IoMdContact/> contact us</a>
                        <a href="#placement"  onClick={() => clck("5")} className={`${show2 == 'five' ? "cl1" : null }`}><FaMedal/>placement</a>
                        <button>get in touch</button>
+                       <span><CgArrowTopRight style={{fontSize:"25px",fontWeight:'bolder'}}/></span>
+
                   </div>
                   {/* this for the enroll */}
                   <div className="nav-block center nav-block3">
-                       <button>get in touch<CgArrowTopRight /></button>
+                       <button>get in touch</button>
+                       <span><CgArrowTopRight style={{fontSize:"25px",fontWeight:'bolder'}}/></span>
                        <h1 onClick={clk}>  {active ? <IoCloseSharp /> : <HiMiniBars3CenterLeft />} </h1>
                   </div>   
 

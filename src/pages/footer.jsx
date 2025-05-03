@@ -10,12 +10,21 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 export default function Footer(){
   const [height, setHeight] = useState(0);
-
+  const [on,setOn] = useState(false)
+   // this for the on scroll event 
   useEffect(() => {
     const onScroll = () => setHeight(window.scrollY);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+  // 5876
+  useEffect(() => {
+    const text = document.querySelector(".text");
+    if (height >= 6400) {
+      text?.classList.add("act");
+      console.log(height)
+    } 
+  },[height]);
     return(
         <>
           <footer>
@@ -57,7 +66,7 @@ export default function Footer(){
               {/* this for the logo */}
               <div className="f-logo">
                   <div className="code center">
-                    <p className='text animate'>CODE99 IT ACADEMY</p>
+                    <p className='text animate'>CODE99 IT ACADEMY</p>         
                     <hr className="line"/>
                   </div>
                   <div className="copy right center">

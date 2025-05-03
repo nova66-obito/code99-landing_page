@@ -136,33 +136,33 @@ export default function Land_page() {
     // this for the review
     let num = [1, 2, 3, 4, 5]
     // this for the video
-     const vid = [
+    const vid = [
         {
-            pic:vid1,
-            url:"#",
+            pic: vid1,
+            url: "#",
 
         },
         {
-            pic:vid2,
-            url:"#"
+            pic: vid2,
+            url: "#"
         },
         {
-            pic:vid3,
-            url:"#"
+            pic: vid3,
+            url: "#"
         },
         {
-            pic:"none",
-            url:"#"
+            pic: "none",
+            url: "#"
         },
         {
-            pic:vid5,
-            url:"#"
+            pic: vid5,
+            url: "#"
         },
         {
-            pic:vid6,
-            url:"#"
+            pic: vid6,
+            url: "#"
         },
-     ]
+    ]
     return (
         <>
             <main>
@@ -278,70 +278,68 @@ export default function Land_page() {
                     </div>
                     {/*-------------------------------------------------------------------------------------------- */}
                     {/* this for the review */}
-                     <Review/>
+                    <Review />
                     {/* -------------------------------------------------------------------------- */}
                     {/* this for the why choose*/}
                     <div id="why" className="choose full title center">
                         <h1>why choose us</h1>
                         <div className="choose-cover center">
                             <div className="c-holder center c-h1">
-                               <Choose nam="box1" photo={w4} head="free breakfast" txt="early morning session (4:30-6-30 AM)"/>
-                               <Choose nam="box2" photo="none" head="Portfolio Building" txt=" to Showcase Your Skills"/>
-                               <Choose nam="box3" photo={w3} head="Mock Interviews" txt="to Boost Confidence"/>
+                                <Choose nam="box1" photo={w4} head="free breakfast" txt="early morning session (4:30-6-30 AM)" />
+                                <Choose nam="box2" photo="none" head="Portfolio Building" txt=" to Showcase Your Skills" />
+                                <Choose nam="box3" photo={w3} head="Mock Interviews" txt="to Boost Confidence" />
                             </div>
                             <div className="c-holder center ch-2">
-                               <Choose nam="box4" photo={w2} head="daily biometric" txt="attendance for discipline"/>
-                               <Choose nam="box5" photo={w3} head="Mock Interviews" txt="to Boost Confidence"/>
+                                <Choose nam="box4" photo={w2} head="daily biometric" txt="attendance for discipline" />
+                                <Choose nam="box5" photo={w3} head="Mock Interviews" txt="to Boost Confidence" />
                             </div>
                             <div className="c-holder center ch-3">
-                               <Choose nam="box6" photo={w5} head="ID card" txt="for professional touch"/>
-                               <Choose nam="box7" photo={w1} head="placement Support" txt="to Boost Confidence"/>
-                               <Choose nam="box8" photo={w2} head="daily biometric" txt="attendance for discipline"/>
+                                <Choose nam="box6" photo={w5} head="ID card" txt="for professional touch" />
+                                <Choose nam="box7" photo={w1} head="placement Support" txt="to Boost Confidence" />
+                                <Choose nam="box8" photo={w2} head="daily biometric" txt="attendance for discipline" />
                             </div>
                         </div>
                     </div>
                     {/* ---------------------------------------------------- */}
                     {/* this for the blog */}
                     <div className="full center title video-page">
-                         <h1>videos</h1>
-                         <div className="b-cover center">
-                             {vid.map((item)=>{
-                                return(
+                        <h1>videos</h1>
+                        <div className="b-cover">
+                            {vid.map((item) => {
+                                return (
                                     <>
-                                      <a href={item.url}>
-                                         <div className="v-holder">
-                                           <img src={item.pic} alt="bloges" />
-                                         </div>   
-                                      </a>
+                                        <div className="v-holder">
+                                            <a href="#"><img src={item.pic} alt="insta video" /></a>
+                                        </div>
                                     </>
                                 )
-                             })}
-                         </div>
+                            })}
+                        </div>
                     </div>
                     {/* this for the course */}
                     <div id="course" className="course center title full">
-                         <h1>our courses</h1>
-                          <div className="course-cover center">
-                              <Course/>   
-                          </div>
-                          <div className="tool-image">
-                             <img src={Tool} alt="tools using" />
-                          </div>
+                        <h1>our courses</h1>
+                        <div className="course-cover center">
+                            <Course />
+                        </div>
+                        <div className="tool-image">
+                            <img src={Tool} alt="tools using" />
+                        </div>
                     </div>
                     {/* --------------------------------------------------- */}
                     {/* this for the contact us */}
                     <div id="contact" className="full contact-us center">
                         <div className="cont-pic cont-holder center">
-                           <img src={Model} alt="for the fro,m image"/>
+                            <img src={Model} alt="for the fro,m image" />
                         </div>
                         {/* this for the form*/}
                         <div className="cont-form cont-holder center">
-                          <Form_card/>
+                            <Form_card />
                         </div>
                     </div>
                     {/* this for the footer*/}
-                 </section>
-                 <Footer/>
+                </section>
+                <Footer />
             </main>
         </>
     )
