@@ -20,10 +20,13 @@ export default function Footer(){
   // 5876
   useEffect(() => {
     const text = document.querySelector(".text");
-    if (height >= 6400) {
+    if (height >= 5600) {
       text?.classList.add("act");
       console.log(height)
     } 
+    else{
+      text?.classList.remove("act");
+    }
   },[height]);
     return(
         <>
@@ -46,11 +49,11 @@ export default function Footer(){
                   </div>
                   <div className="details">
                      <b>social</b>
-                      <a href="#Home"><FaFacebook className="socail"/><h6>facebook</h6></a>
-                      <a href="#Home"><FaInstagram className="socail"/><h6>facebook</h6></a>
-                      <a href="#Home"><FaYoutube className="socail"/><h6>youtube</h6></a>
-                      <a href="#Home"><FaLinkedin className="socail"/><h6>linkedin</h6></a>
-                      <a href="#Home"><FaSquareXTwitter className="socail"/><h6>twitter</h6></a>
+                      <a href="https://www.facebook.com/" target="_blank"><FaFacebook className="socail"/><h6>facebook</h6></a>
+                      <a href="https://www.instagram.com/"  target="_blank"><FaInstagram className="socail"/><h6>facebook</h6></a>
+                      <a href="https://www.youtube.com/@Code99ITAcademy"  target="_blank"><FaYoutube className="socail"/><h6>youtube</h6></a>
+                      <a href="https://in.linkedin.com/" target="_blank"><FaLinkedin className="socail"/><h6>linkedin</h6></a>
+                      <a href="https://x.com/" target="_blank"><FaSquareXTwitter className="socail"/><h6>twitter</h6></a>
                   </div>
                   <div className="details address">
                      <b>get in touch</b>

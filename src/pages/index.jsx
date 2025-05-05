@@ -55,8 +55,30 @@ import Course from "./course";
 import Review from "./slider";
 import Model from "../images/model4.png";
 import Uper from "../images/uper.png";
+// this for the company logo
+import com1 from '../images/c-1.png';
+import com2 from '../images/c-2.png';
+import com3 from '../images/logo.png';
+import com4 from '../images/c-4.png';
+import com5 from '../images/c-5.png';
+import com6 from '../images/c-6.png';
+import com7 from '../images/c-7.png';
+import com8 from '../images/c-8.png';
+import com9 from '../images/c-9.png';
+import com10 from '../images/c-10.png';
+import com11 from '../images/c-11.png';
+import com12 from '../images/c-12.png';
+import com13 from '../images/c-13.png';
+import com14 from '../images/c-14.png';
+import com16 from '../images/c-16.png';
+import com18 from '../images/c-18.png';
+import com19 from '../images/c-19.png';
+import com20 from '../images/c-20.png';
+import com21 from '../images/c-21.png';
+import com22 from '../images/c-22.png';
 export default function Land_page() {
     const [Hover, setHover] = useState(false);
+    const [video ,setVideo] = useState(false);
     const settings = {
         dots: true,
         infinite: true,
@@ -131,7 +153,80 @@ export default function Land_page() {
         },
     ];
     // this for the button
-    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 3, 4]
+    const arr = [
+        {
+            company:com1,
+        },
+        {
+            company:com2,
+        },
+        {
+            company:com3,
+        },
+        {
+            company:com4,
+        },
+        {
+            company:com5,
+        },
+        {
+            company:com6,
+        },
+        {
+            company:com7,
+        },
+        {
+            company:com8,
+        },
+        {
+            company:com9,
+        },
+        {
+            company:com10,
+        },
+        {
+            company:com11,
+        },
+
+    ]
+    const arr2 = [
+        {
+            company:com12,
+        },
+        {
+            company:com13,
+        },
+        {
+            company:com14,
+        },
+        {
+            company:com16,
+        },
+        {
+            company:com18,
+        },
+        {
+            company:com19,
+        },
+        {
+            company:com20,
+        },
+        {
+            company:com21,
+        },
+        {
+            company:com22,
+        },
+        {
+            company:com1,
+        },
+        {
+            company:com2,
+        },
+        {
+            company:com4,
+        },
+    ]
     //  this for the photo change
     const image = [std1, std2, std3, std4, std5, std6, std7, std8, std9, std10]
     const [currentpic, setCurrentpic] = useState(null);
@@ -313,16 +408,20 @@ export default function Land_page() {
                                 {arr.map((items) => {
                                     return (
                                         <>
-                                            <button><h4><FaLessThan /></h4>accenture</button>
+                                           <div className="com-logo">
+                                             <img src={items.company} alt="company logo" />
+                                           </div>
                                         </>
                                     )
                                 })}
                             </div>
                             <div className="bot-btn r-btn center">
-                                {arr.map((items) => {
+                                {arr2.map((items) => {
                                     return (
                                         <>
-                                            <button><h4><FaLessThan /></h4>accenture</button>
+                                           <div className="com-logo">
+                                             <img src={items.company} alt="company logo" />
+                                           </div>
                                         </>
                                     )
                                 })}
@@ -355,14 +454,14 @@ export default function Land_page() {
                     </div>
                     {/* ---------------------------------------------------- */}
                     {/* this for the blog */}
-                    <div className="full center title video-page">
+                    <div id="video" className="full center title video-page">
                         <h1>videos</h1>
-                        <div className="b-cover">
+                        <div className={`b-cover`}>
                             {vid.map((item) => {
                                 return (
                                     <>
-                                        <div className="v-holder">
-                                            <a href="#"><img src={item.pic} alt="insta video" /></a>
+                                        <div className={`v-holder ${video ? 'animet' : ""}`} onMouseEnter={()=>setVideo(true)} onMouseLeave={()=>setVideo(false)}>
+                                            <img src={item.pic} alt="insta video" />
                                         </div>
                                     </>
                                 )
