@@ -72,7 +72,7 @@ export default function Footer(){
                     <p className='text animate'>CODE99 IT ACADEMY</p>         
                     <hr className="line"/>
                   </div>
-                  <div className="copy right center">
+                  <div className="copy-right center">
                      <h6 className="text-center">Copyrights © 2025 Code991tAcademy | All rights reserved</h6>
                   </div>
               </div>
