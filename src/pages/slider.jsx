@@ -3,6 +3,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
+import pre from '../images/prev.png'
+import next from '../images/next.png'
 import { FaStar } from "react-icons/fa";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
@@ -116,10 +118,10 @@ export default function Slider() {
             <div className="slider-controler">
               <div className="swiper-button-prev slider-arrow">
                 <MdArrowForwardIos className='left' />
-                <p><img src={"kkk"} alt="" />PREV</p>
+                <p><img src={pre} alt="prev" />PREV</p>
               </div>
               <div className="swiper-button-next slider-arrow">
-                <p>NEXT<img src={"kk"} alt="" /></p>
+                <p>NEXT <img src={next} alt="next" /></p>
                 <MdArrowBackIosNew className='right' />
               </div>
               <div className="swiper-pagination"></div>

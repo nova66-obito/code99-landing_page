@@ -8,7 +8,7 @@ export default function Choose(val){
                  <h5>{val.head}</h5>
                  <p>{val.txt}</p>
               </div>
-              <div className="c-pic">
+              <div className="c-pic center">
                   <img src={val.photo} alt="support" />
               </div>
           </div>

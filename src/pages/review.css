@@ -18,15 +18,12 @@
   font-family: var(--heading);
   font-weight: 600;
   transition: all 0.8s;
-  font-size: 50px;
-  line-height: 75px;
-  letter-spacing: 0%;
   text-align: center;
 }
 
 
 .reviews{
-  padding: 80px 20px;
+  padding:40px 20px;
   background-color: rgba(248, 254, 239, 1);
 }
 
@@ -88,6 +85,8 @@
   gap: 7px;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: 10px;
 }
 .slider-arrow p img{
   width:11px;
@@ -144,6 +143,16 @@
 }
 @media only screen and (max-width:650px){
   .reviews .swiper-slide {
-    width: 80%;
+    width: 80% !important;
+    height: 350px !important;
+  }
+  p{
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width:900px) and (min-width:650px){
+  
+  .reviews .swiper{
+     height: 120vh !important;
   }
 }

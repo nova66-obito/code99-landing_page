@@ -10,7 +10,7 @@ import w1 from '../images/why1.png';
 import w2 from '../images/why2.png';
 import w3 from '../images/why3.png';
 import w4 from '../images/why4.png';
-import w5 from '../images/why 5.png';
+import w5 from '../images/why5.png';
 // this for the video
 import vid1 from "../images/vid1.png";
 import vid2 from "../images/vid2.png";
@@ -439,16 +439,14 @@ export default function Land_page() {
                             <div className="c-holder center c-h1">
                                 <Choose nam="box1" photo={w4} head="free breakfast" txt="early morning session (4:30-6-30 AM)" />
                                 <Choose nam="box2" photo="none" head="Portfolio Building" txt=" to Showcase Your Skills" />
-                                <Choose nam="box3" photo={w3} head="Mock Interviews" txt="to Boost Confidence" />
                             </div>
                             <div className="c-holder center ch-2">
-                                <Choose nam="box4" photo={w2} head="daily biometric" txt="attendance for discipline" />
-                                <Choose nam="box5" photo={w3} head="Mock Interviews" txt="to Boost Confidence" />
+                                <Choose nam="box4" photo={w3} head="daily biometric" txt="attendance for discipline" />
+                                <Choose nam="box5" photo={w2} head="Mock Interviews" txt="to Boost Confidence" />
                             </div>
                             <div className="c-holder center ch-3">
                                 <Choose nam="box6" photo={w5} head="ID card" txt="for professional touch" />
                                 <Choose nam="box7" photo={w1} head="placement Support" txt="to Boost Confidence" />
-                                <Choose nam="box8" photo={w2} head="daily biometric" txt="attendance for discipline" />
                             </div>
                         </div>
                     </div>

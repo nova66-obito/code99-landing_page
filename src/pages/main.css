@@ -69,7 +69,6 @@ main{
 }
 .pl-cover:first-child{
     justify-content: flex-start;
-    margin-left: 5000px;
 }
  .anime-stop{
     animation-play-state: paused;
@@ -79,7 +78,7 @@ main{
        transform: translatex(0%);
     }
     100%{
-        transform: translatex(-42%);
+        transform: translatex(-22%);
     }  
  }
  /* this is a overall of the design */
@@ -309,7 +308,7 @@ main{
   width: 150px;
   height: 60px;
   background:white;
-  box-shadow: 0px -0px 5px black;
+  box-shadow: 0px 0px 3px black;
 }
 .com-logo > img{
     width: 100%;
@@ -323,10 +322,10 @@ main{
 }
 @keyframes l-move {
     0%{
-        transform: translateX(0%);
+        transform: translateX(10%);
     }
     100%{
-        transform: translateX(13%);
+        transform: translatex(-1%);
     }
 }
 .bot-btn{
@@ -334,10 +333,10 @@ main{
 }
 @keyframes r-move {
     0%{
-        transform: translateX(0%);
+        transform: translateX(-10%);
     }
     100%{
-        transform: translateX(-13%);
+        transform: translateX(1%);
     }
 }
 /* why choose us */
@@ -351,7 +350,7 @@ main{
 /* card */
 .c-box{
     overflow: hidden;
-    width: 100%;
+    width: 90%;
     min-height: 300px;
     background:var(--box);
     color: var(--prime);
@@ -382,16 +381,12 @@ main{
 .c-pic > img{
     width: 100%;
     height: 180px;
-    object-fit: fill;
+    object-fit: cover;
 }
 /* this is overall the box */
 .choose-cover{
   width: 100%;
   justify-content: space-around;
-}
-/*  */
-.c-holder > .box3 , .c-holder > .box8{
-    display: none;
 }
 /* ---------------------------------------------- */
 /* this for the video */
@@ -427,7 +422,7 @@ main{
 }
 @keyframes scl {
     from{
-        transform: translateX(200px);
+        transform: translateX(0px);
     }
     to{
        transform: translateX(-2500px);
@@ -447,10 +442,10 @@ main{
 }
 /* this for the course */
 .course{
-    gap:20px;
     flex-direction: column;
 }
 .course > h1{
+    padding: 20px 0;
     font-family: var(--heading);
 }
 /*course cover */
@@ -464,7 +459,7 @@ main{
 .course-box{
     width: 230px;
     padding: 20px;
-    min-height:350px;
+    height:350px;
     border-radius: 10px;
     background: var(--prime);
     box-shadow: -3px 2px 5px black;
@@ -498,7 +493,6 @@ main{
 .pic-co{
     width: 50%;
     height: 50%;
-    border-radius: 50%;
     overflow:hidden
 }
 .pic-co > img{
@@ -510,27 +504,26 @@ main{
     padding:3px 20px;
     border-radius: 30px;
     border: none;
+    width: 90%;
     background: var(--box);
     color: var(--prime);
     font-weight: bolder;
     font-family: 'Courier New', Courier, monospace;
     text-transform: capitalize;
-    box-shadow: 3px -1px 5px black;
 }
-.text-co > a >  button:hover{
+.text-co:hover > a >  button{
     background: var(--title);
     color: black;
 }
 /* this for the tool page image */
 .tool-image{
-    width: 100%;
     height: 80vh;
     padding-top: 80px;
 }
 .tool-image > img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 /* this for the contact */
 .contact-us{
@@ -551,6 +544,7 @@ form{
     display: flex;
     flex-direction: column;
     gap:10px;
+    width: 75%;
 }
 .value{
     position: relative;
@@ -641,47 +635,51 @@ footer{
     color: var(--prime);
 }
 .navigation {
-    padding: 10px;
-    gap:10px;
-    flex-wrap: wrap;
-    min-height: 52vh;
+    min-height: 30vh;
     width: 100%;
-    align-items: flex-start;
+    padding-top: 40px;
 }
-.details{
-    width: 180px;
-    height: 300px;
-    padding: 10px;
+.navigation > div{
+   width: 50%;
+}
+.n-left > div{
+    width: 20%;
+    min-height: 220px;
+}
+.n-right > div{
+    width: 45%;
+    min-height: 220px;
+}
+.s-icon{
+    display: none;
 }
 .details > a{
   text-decoration: none;
   color: var(--prime);
   display: flex;
-  margin-top: 10px;
+  margin:5px 0 0 0 ;
+  font-weight: 400;
+  font-size: 14px;
 }
 .details > a:hover{
     background:rgb(164, 160, 160,0.4);
 }
-.details > b{
+.details > h6{
   color: var(--title);
-}
-.address{
-    width: 300px;
-}
-/*this for the locatuion*/
-.locat{
-    width: 320px;
-    padding: 10px;
-}
-/* this for the icon */
-.socail
-{
-  font-size: 20px;
+  padding-bottom: 5px;
 }
 .locat > iframe{
     width: 100%;
-    height: 180px;
+    height: 170px;
     margin-top: 5px;
+}
+.socail{ 
+    margin-top: 3px;
+    margin-right: 3px;
+}
+.mail{
+   margin-top: -6px;
+   margin-right: 3px;
 }
 /* this for the logo */
 .code {
@@ -693,12 +691,12 @@ footer{
 
   /* this fotr the ling */
   .text {
-    font-size: 8vw;
+    font-size: 9vw;
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
     -webkit-text-stroke: 2px white;
     color: transparent;
-    background: url("../images//wave.svg");
+    /* background: url("../images//wave.svg"); */
     background-clip: text;
     background-size: cover;
     background-position: -3% 0%;
@@ -708,7 +706,7 @@ footer{
   }
   .act{
      background-image: url(../images/wave.svg);
-     background-position:10% 15%;
+     background-position:10% 10%;
      transition: all 1s;
      animation: up 1 2s 2s forwards;
      opacity: 1;
@@ -718,6 +716,9 @@ footer{
     height: 4px;
     background-color:white;
     opacity: 1;
+  }
+  .copy-right > h6{
+    padding-bottom: 10px;
   }
 
 /* this for the phone */
@@ -780,6 +781,7 @@ footer{
     .min-card {
         width: 55px;
         height: 90px;
+        overflow:hidden !important;
     }
     .sub-pic > h3{
         align-self:center;
@@ -790,42 +792,54 @@ footer{
         height: 40px;
     }
     /* this for the choose */
+    form {
+        width: 95%;
+    }
     .choose{
-        gap: 30px;
+        gap: 50px;
+        min-height: 75vh;
     }
     .c-holder{
         width: 45%;
     }
-    .c-holder > .box3 , .c-holder > .box8{
-        display: block;
-    }
-    .ch-2{
-      display: none;    
-    }
     .c-box{
-        border-radius: 10px;
-        min-height: 250px;
+        border-radius: 5px;
+        min-height: 130px;
     }
     .c-pic > img{
-        height: 130px;
+        width: 90%;
+        height: 60px;
     } 
+    .c-txt{
+        padding: 5px 10px;
+    }
+    .ch-2 {
+        transform: translatey(0px);
+    }
+    .c-h1{
+        transform: translateY(30px);
+    }
+    .ch-3{
+        transform: translateY(-30px);
+    }
     .c-txt > h5 {
-        font-size: 13px;
+        font-size: 12px;
     }
     .c-txt > p{
-        font-size:10px ;
+        font-size:7px ;
+        margin: 0;
     }
     /* this for the video */
      .video-page{
-        min-height: 75vh;
+        min-height: 80vh;
         gap: 0;
      }  
+     .video-page > h1{
+         padding-top:70px ;
+     }
      .v-holder{
          width: 250px;
          height: 350px;
-       }
-       .video-page > h1{
-        padding-top: 20px;
        }
     /* temp */
     .card-holder{
@@ -835,13 +849,43 @@ footer{
     .course > h1{
         padding-top:30px ;
     }
+    .course-cover{
+        gap: 10px;
+        padding: 5px;
+    }
     .course-box{
+        width: 28%;
+        height: 150px;
+        padding: 0;
+    }
+    .text-co > h5{
+     font-size: 10px;
+     margin: 0;
+     font-weight: bolder;
+     padding: 0 !important;
+    }
+    .text-co > p{
+        font-size: 7px;
+        margin-bottom: 0;
+        padding:0 6px;
+    }
+    .pic-co{
         width: 80%;
+        height: 50px;
+    }
+    .pic-co > img{
+      width: 50px;
+      height:50px;
+    }
+    .text-co > a > button {
+      font-size: 5px;
+      width: 80%;
+      box-shadow: none;
     }
     /* this for the tool image holder */
     .tool-image {
         height: 30vh;
-        padding: 0;
+        padding-top: 10px;
     }
     /* this for the contact */
     .contact-us{
@@ -858,16 +902,46 @@ footer{
     .navigation {
         flex-direction: column;
     }
-    .details{
-        width: 300px;
-        height:220px;
-        padding: 20px 0;
+    .navigation > div{
+        width: 90%;
+        min-height: 150px;
+     }
+     /* this for the top div */
+     .n-left > div{
+        width: 43%;
+        min-height: 180px;
     }
+     .n-icon{
+        display: none;
+     }
+     .n-right {
+        flex-direction: column;
+        align-items: flex-start;
+        gap:30px;
+     }
+     .s-icon{
+        display: block;
+     }
+     .s-icon-holder{
+        padding-top: 10px;
+     }
+     .locat{
+        width: 100% !important;
+     }
+     .n-right > div{
+        width: 90%;
+        min-height: 150px;
+     } 
+     .top-icon-locat{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+     }
     .text {
         margin-top: 10px;
         -webkit-text-stroke: 0.5px white;
     }
-    .right > h6{
+    .copy-right > h6{
         font-size: 10px;
     }
 }
@@ -916,12 +990,16 @@ footer{
     .min-card {
         width: 125px;
         height:120px;
+        overflow: hidden;
     }
     .sub-pic > h3{
         align-self: center;
     }
     /* choose */
-     .c-holder{
+    form{
+        width: 100%;
+    } 
+    .c-holder{
         width: 30%;
     }
     .c-pic > img{
@@ -953,13 +1031,15 @@ footer{
         justify-content: space-evenly;
     }
       /* footer */
-      .navigation {
+     .navigation {
         flex-direction: column;
     }
-    .details{
-        width: 90%;
-        min-height:auto;
+    .navigation > div {
+        width: 95%;
     }
+    .n-left > div{
+        width: 30%;
+     }
     .swiper{
         height: 75vh !important;
     }
@@ -970,17 +1050,26 @@ footer{
         width: 100px;
         height:100px;
     }
+   
 }
 @media screen and (max-width:598px) and (min-width:420px) {
     .min-card {
         width: 70px;
         height:80px;
     }
+    .c-box {
+        min-height: 160px;
+    }
+    .c-pic > img {
+        width: 100%;
+        height: 110px;
+    }
 }
 @media screen and (max-width:1214px) and (min-width:900px) {
     .min-card {
         width: 80px;
         height:100px;
+        overflow: hidden;
     }
 }
 @media screen and (max-width:980px) and (min-width:900px) {
