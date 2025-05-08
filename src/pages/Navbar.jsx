@@ -22,15 +22,15 @@ const [show2 ,setShow2] = useState("")
 let clck = (call) => {
     switch (call) {
         case "1":
-            return setShow2("one");
+            return setShow2("one"),setActive(!active)
         case "2":
-            return setShow2("two");
+            return setShow2("two"),setActive(!active)
         case "3":
-            return setShow2("three");
+            return setShow2("three"),setActive(!active)
         case "4":
-            return setShow2("four");
+            return setShow2("four"),setActive(!active)
             case "5":
-                return setShow2("five");
+                return setShow2("five"),setActive(!active)
     }
 }
     return(

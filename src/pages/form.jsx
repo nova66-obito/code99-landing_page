@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Model from "../images/model4.png";
+import { FaCheckCircle } from "react-icons/fa";
 import { CgArrowTopRight } from "react-icons/cg";
 export default function Form_card() {
     const [name, setName] = useState('')
@@ -58,58 +60,74 @@ export default function Form_card() {
     }
     return (
         <>
-            {submitSuccess ? <div className="success center"><h2>thankyou for the submit...😊</h2></div> :
-                <form action="" onSubmit={handle}>
-                    {/* this for the heading */}
-                    <div className="header">
-                        <h4>ready to launch your tech career</h4>
+            {submitSuccess ? (
+                <div className="success center">
+                    <div className="sucess-holder center">
+                        <h2>thankyou your application submitted successfully</h2>
+                        <h2><FaCheckCircle style={{fontSize:'30px'}}/></h2>
+                        </div>
+                    </div>) : 
+                    (
+                     <>
+                    <div className="cont-pic cont-holder center">
+                        <img src={Model} alt="for the fro,m image" />
                     </div>
-                    <div className="value">
-                        <input type="text"
-                            onChange={(e) => setName(e.target.value)}
-                        />
-                        <label htmlFor="name" className={`lab ${name ? 'top' : ""}`}>enter your name*</label>
-                        {nameError && <p>{nameError}</p>}
+                    {/* this for the form*/}
+                    <div className="cont-form cont-holder center">
+                        <form action="" onSubmit={handle}>
+                            {/* this for the heading */}
+                            <div className="header">
+                                <h4>ready to launch your tech career</h4>
+                            </div>
+                            <div className="value">
+                                <input type="text"
+                                    onChange={(e) => setName(e.target.value)}
+                                />
+                                <label htmlFor="name" className={`lab ${name ? 'top' : ""}`}>enter your name*</label>
+                                {nameError && <p>{nameError}</p>}
+                            </div>
+                            <div className="value">
+                                <input type="number"
+                                    onChange={(e) => setPhone(e.target.value)}
+                                />
+                                <label htmlFor="name" className={`lab ${phone ? 'top' : ""}`}>enter your phone no*</label>
+                                {phoneError && <p>{phoneError}</p>}
+                            </div>
+                            <div className="value">
+                                <input type="text"
+                                    value={select_val}
+                                    onChange={(e) => setChoose(select_val)}
+                                />
+                                <label htmlFor="name" className={`lab ${select_val ? 'top' : ""}`}>select your course</label>
+                                {chooseError && <p>{chooseError}</p>}
+                                <select value={select_val} onChange={sel_change}>
+                                    <option value=""></option>
+                                    <option value="full stact java">full stack java</option>
+                                    <option value="full stact python">full stack python</option>
+                                    <option value="full stact mearn">full stack mearn</option>
+                                    <option value="UI/UX designer">UI/UX designer</option>
+                                    <option value="digital mareketing">digital mareketing</option>
+                                    <option value="full stack web development">full stack web development</option>
+                                </select>
+                            </div>
+                            <div className="value">
+                                <textarea name="message" id="msg" rows={5}
+                                    onChange={(e) => setMessage(e.target.value)}
+                                ></textarea>
+                                <label className={`lab ${message ? 'top' : ''}`} htmlFor="message">message*</label>
+                                {messageError && <p>{messageError}</p>}
+                            </div>
+                            <div className="f-btn nav-block">
+                                <button>submit</button>
+                                <span><CgArrowTopRight style={{ fontSize: "25px", fontWeight: 'bolder' }} /></span>
+                            </div>
+                        </form>
                     </div>
-                    <div className="value">
-                        <input type="number"
-                            onChange={(e) => setPhone(e.target.value)}
-                        />
-                        <label htmlFor="name" className={`lab ${phone ? 'top' : ""}`}>enter your phone no*</label>
-                        {phoneError && <p>{phoneError}</p>}
-                    </div>
-                    <div className="value">
-                        <input type="text"
-                            value={select_val}
-                            onChange={(e) => setChoose(select_val)}
-                        />
-                        <label htmlFor="name" className={`lab ${select_val ? 'top' : ""}`}>select your course</label>
-                        {chooseError && <p>{chooseError}</p>}
-                        <select value={select_val} onChange={sel_change}>
-                            <option value=""></option>
-                            <option value="full stact java">full stack java</option>
-                            <option value="full stact python">full stack python</option>
-                            <option value="full stact mearn">full stack mearn</option>
-                            <option value="UI/UX designer">UI/UX designer</option>
-                            <option value="digital mareketing">digital mareketing</option>
-                            <option value="full stack web development">full stack web development</option>
-                        </select>
-                    </div>
-                    <div className="value">
-                        <textarea name="message" id="msg" rows={5}
-                            onChange={(e) => setMessage(e.target.value)}
-                        ></textarea>
-                        <label className={`lab ${message ? 'top' : ''}`} htmlFor="message">message*</label>
-                        {messageError && <p>{messageError}</p>}
-                    </div>
-                    <div className="f-btn nav-block">
-                        <button>submit</button>
-                         <span><CgArrowTopRight style={{fontSize:"25px",fontWeight:'bolder'}}/></span>
-                    </div>
-                </form>
 
 
-            }
+                </>
+
+            )}
         </>
     )
 }

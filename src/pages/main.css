@@ -53,7 +53,7 @@ main{
     font-family: var(--heading);
  }
  .place-cover {
-   height: 65vh;
+   height: 390px;
    overflow:scroll;
    width: 100%;
    padding: 20px;
@@ -62,7 +62,7 @@ main{
   display: none;
 }
  .pl-cover{
-    gap: 30px;
+    gap: 20px;
     padding: 20px;
     justify-content: flex-start;
     animation: m-side infinite 15s linear;
@@ -88,11 +88,12 @@ main{
     overflow: hidden;
     flex-direction: column;
     background:var(--prime);
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: -2px 2px 5px black;
  }
  .place-card:hover{
-    scale: 1.05;
+    scale: 1.1;
+    transition: all 0.4s ease-in-out;
     cursor: pointer;
  }
  /* this for the company name */
@@ -205,6 +206,9 @@ main{
     z-index: 99;
     cursor: pointer;
     visibility: hidden;
+}.w-icon > a > img{
+    width: 40px;
+    height: 40px;
 }
 .view{
     visibility: visible;
@@ -398,7 +402,7 @@ main{
     font-family: var(--heading);
 }
 .b-cover{
-    height: 75vh;
+    height: 500px;
     width: 100%;
     overflow: scroll;
     gap: 10px;
@@ -523,7 +527,7 @@ main{
 .tool-image > img{
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
 }
 /* this for the contact */
 .contact-us{
@@ -567,7 +571,7 @@ form{
    background: var(--box);
    font-size: 13px; 
 }
-.value > input:focus,textarea:focus{
+.value > input:focus,textarea:focus,select :focus{
     border: 2px solid var(--title);
 }
 .value > input:focus ~ .lab ,textarea:focus ~ .lab {
@@ -583,15 +587,16 @@ form{
   margin: 0;
 }
  select{
-    width: 5%;
-    padding: 5px;
+    width: 3%;
+    padding: 0px;
     position: absolute;
-    top:3px;
+    top:15px;
     right: 5px;
-    background: transparent;
+    background:transparent;
     border: none;
-    color: white;
+    color:white;
     outline: none;
+    border: none;
 }
 select > option{
     background: var(--box);
@@ -610,12 +615,26 @@ select > option{
 }
 /* this for the success */
 .success{
-    width: 85%;
-    background: var(--title);
-    height: 150px;
+    width: 100%;
+    background:rgb(164, 160, 160,0.4);
+    height: 100vh;
     border-radius: 10px;
-    box-shadow: 3px 2px 5px black;
+}
+.sucess-holder{
+    background:var(--title);
+    height: 170px;
+    padding: 30px;
+    width: 30%;
+    border-radius: 20px;
+    box-shadow: 0 0 5px black;
+    flex-direction: column;
     animation: scal 2s 1 forwards;
+}
+.sucess-holder > h2{
+   font-weight: 300;
+   font-size: 23px;
+   font-style: italic;
+   text-align: center;
 }
 @keyframes scal {
     from{
@@ -736,8 +755,12 @@ footer{
         font-size: 25px;
     }
     /* first page image */
+    .w-icon{
+        width: 40px;
+        height: 40px;
+    }
     .s-place{
-        min-height: 70vh;
+        min-height: 75vh;
     }
     .h-pic{
         width: 100%;
@@ -750,7 +773,7 @@ footer{
     .place-card{
         min-width: 180px;
         height: 250px;
-        border-radius: 5px;
+        border-radius: 10px;
     }
     .p-pic > div > img {
         width: 80px;
@@ -763,7 +786,7 @@ footer{
         font-size: 10px;
       }
     .place-cover {
-        height: 50vh;
+        height: 270px;
     }
     /* story */
     .s-cover{
@@ -807,8 +830,8 @@ footer{
         min-height: 130px;
     }
     .c-pic > img{
-        width: 90%;
-        height: 60px;
+        width: 100%;
+        height: 85px;
     } 
     .c-txt{
         padding: 5px 10px;
@@ -834,6 +857,9 @@ footer{
         min-height: 80vh;
         gap: 0;
      }  
+     .b-cover {
+        height: 380px;
+     }
      .video-page > h1{
          padding-top:70px ;
      }
@@ -944,6 +970,13 @@ footer{
     .copy-right > h6{
         font-size: 10px;
     }
+    .sucess-holder{
+        height: 100px;
+        width: 80%;
+    }
+    .sucess-holder > h2{
+       font-size: 15px;
+    }
 }
 
 
@@ -1029,6 +1062,9 @@ footer{
     }
     .contact-us{
         justify-content: space-evenly;
+    }
+    .sucess-holder{
+        width: 50%;
     }
       /* footer */
      .navigation {

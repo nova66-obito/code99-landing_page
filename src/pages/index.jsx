@@ -53,7 +53,6 @@ import Tool from "../images/tools.png";
 import Bg from "../images/back-ground.png";
 import Course from "./course";
 import Review from "./slider";
-import Model from "../images/model4.png";
 import Uper from "../images/uper.png";
 // this for the company logo
 import com1 from '../images/c-1.png';
@@ -315,7 +314,7 @@ export default function Land_page() {
                     {/* this for the home page */}
                     <div className="home center">
                         <div className="h-txt center">
-                            <h1>India's 1st Institute to Provide Free Training</h1>
+                            <h1>India's 1st Institute to Provide Free IT Training</h1>
                         </div>
                         <Carousel data-bs-theme="dark">
                             <Carousel.Item>
@@ -327,7 +326,7 @@ export default function Land_page() {
                                 />
                             </Carousel.Item>
                             <Carousel.Item>
-                                <h2>batch-1 student</h2>
+                                <h2>batch-I student</h2>
                                 <img
                                     className="d-block w-100"
                                     src={Batch1}
@@ -335,7 +334,7 @@ export default function Land_page() {
                                 />
                             </Carousel.Item>
                             <Carousel.Item>
-                                <h2>batch-2 student</h2>
+                                <h2>batch-II student</h2>
                                 <img
                                     className="d-block w-100"
                                     src={Batch2}
@@ -343,7 +342,7 @@ export default function Land_page() {
                                 />
                             </Carousel.Item>
                             <Carousel.Item>
-                                <h2>batch-3 student</h2>
+                                <h2>batch-III student</h2>
                                 <img
                                     className="d-block w-100"
                                     src={Batch3}
@@ -351,7 +350,7 @@ export default function Land_page() {
                                 />
                             </Carousel.Item>
                             <Carousel.Item>
-                                <h2>batch-4 student</h2>
+                                <h2>batch-IV student</h2>
                                 <img
                                     className="d-block w-100"
                                     src={Batch4}
@@ -364,7 +363,7 @@ export default function Land_page() {
                     <div id="placement" className="s-place title center">
                         {/* this for the icon */}
                         <div className={`w-icon ${view ? "view" :'' }`}>
-                            <img src={Uper} alt="icon" />
+                            <a href="#"> <img src={Uper} alt="icon" /></a>
                         </div>
                         <h1>student placement</h1>
                         <div className="place-cover center">
@@ -479,13 +478,7 @@ export default function Land_page() {
                     {/* --------------------------------------------------- */}
                     {/* this for the contact us */}
                     <div id="contact" className="full contact-us center">
-                        <div className="cont-pic cont-holder center">
-                            <img src={Model} alt="for the fro,m image" />
-                        </div>
-                        {/* this for the form*/}
-                        <div className="cont-form cont-holder center">
-                            <Form_card />
-                        </div>
+                       <Form_card/>
                     </div>
                     {/* this for the footer*/}
                 </section>

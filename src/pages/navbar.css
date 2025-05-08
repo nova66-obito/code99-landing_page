@@ -92,12 +92,15 @@ nav > div a:hover{
     .nav-block2{
         gap: 5px;
     }
-    .nav-block3 > button{
-      font-size: 15px;
+    .nav-block3 > button {
+      font-size: 12px;
       padding: 5px 10px;
     }
+    .nav-block3 > span{
+      scale: 0.85;
+      right:12px;
+    }
 }
-
 @media (max-width: 800px) and  (min-width:300px) {
   .nav-block2{ 
     position:fixed;
@@ -143,10 +146,13 @@ nav > div a:hover{
   .nav-block1{
     width: 50%;
   }
-  .nav-block2 > button ,.nav-block2 > span{
+  .nav-block2 > button {
     display: block;
-    right: -118px;
-    top:-50px;
+  }
+  .nav-block2 > span{
+    display: block;
+    right: -116px;
+    top:-40px;
   }
   .logo-txt > h3{
     font-size: 30px;
@@ -166,5 +172,10 @@ nav > div a:hover{
     border-radius: 20px;
     box-shadow: -2px 2px 4px black;
     z-index: 1;
+  }
+}
+@media (max-width: 700px) and  (min-width:300px) {
+  .nav-block2 > span{
+    top:-49px;
   }
 }
