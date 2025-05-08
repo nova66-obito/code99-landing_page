@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Navbar from "./Navbar";
 import Footer from "./footer";
 import './main.css';
 import Form_card from "./form";
 import Choose from "./choose";
+import "../pages/story.css"
 import Placement from "./placement";
 // this for the why choose image
 import w1 from '../images/why1.png';
@@ -40,13 +41,23 @@ import std7 from "../images/place7.png"
 import std8 from "../images/place8.png"
 import std9 from "../images/place9.png"
 import std10 from "../images/place10.png"
+import std11 from "../images/place11.png"
+import std12 from "../images/place12.png"
+import std13 from "../images/place13.png"
+import std14 from "../images/place14.png"
+import std15 from "../images/place15.png"
+import std16 from "../images/place16.png"
+import std17 from "../images/place17.png"
+import std18 from "../images/place18.png"
+import std19 from "../images/place19.png"
+import std20 from "../images/place20.png"
+import std21 from "../images/place21.png"
+import std22 from "../images/place22.png"
+import std23 from '../images/place23.png'
 // this for the company logo
 
 // slider
 import Carousel from 'react-bootstrap/Carousel';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 // icons
 import { FaLessThan } from "react-icons/fa";
 import Tool from "../images/tools.png";
@@ -75,9 +86,11 @@ import com19 from '../images/c-19.png';
 import com20 from '../images/c-20.png';
 import com21 from '../images/c-21.png';
 import com22 from '../images/c-22.png';
+import prev from "../images/prev.png";
+import next from "../images/next.png";
 export default function Land_page() {
     const [Hover, setHover] = useState(false);
-    const [video ,setVideo] = useState(false);
+    const [video, setVideo] = useState(false);
     const settings = {
         dots: true,
         infinite: true,
@@ -154,87 +167,78 @@ export default function Land_page() {
     // this for the button
     const arr = [
         {
-            company:com1,
+            company: com1,
         },
         {
-            company:com2,
+            company: com2,
         },
         {
-            company:com3,
+            company: com3,
         },
         {
-            company:com4,
+            company: com4,
         },
         {
-            company:com5,
+            company: com5,
         },
         {
-            company:com6,
+            company: com6,
         },
         {
-            company:com7,
+            company: com7,
         },
         {
-            company:com8,
+            company: com8,
         },
         {
-            company:com9,
+            company: com9,
         },
         {
-            company:com10,
+            company: com10,
         },
         {
-            company:com11,
+            company: com11,
         },
 
     ]
     const arr2 = [
         {
-            company:com12,
+            company: com12,
         },
         {
-            company:com13,
+            company: com13,
         },
         {
-            company:com14,
+            company: com14,
         },
         {
-            company:com16,
+            company: com16,
         },
         {
-            company:com18,
+            company: com18,
         },
         {
-            company:com19,
+            company: com19,
         },
         {
-            company:com20,
+            company: com20,
         },
         {
-            company:com21,
+            company: com21,
         },
         {
-            company:com22,
+            company: com22,
         },
         {
-            company:com1,
+            company: com1,
         },
         {
-            company:com2,
+            company: com2,
         },
         {
-            company:com4,
+            company: com4,
         },
     ]
-    //  this for the photo change
-    const image = [std1, std2, std3, std4, std5, std6, std7, std8, std9, std10]
-    const [currentpic, setCurrentpic] = useState(null);
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentpic(image[Math.floor(Math.random() * image.length)])
-        }, 5000)
-        return () => clearInterval(interval);
-    }, [])
     //  --------------------------------------------------------
     // this for the review
     let num = [1, 2, 3, 4, 5]
@@ -293,19 +297,259 @@ export default function Land_page() {
     // scroll event for the icon
     const [view, setView] = useState(false);
     const [height, setHeight] = useState(0);
-     useEffect(() => {
+    useEffect(() => {
         const onScroll = () => setHeight(window.scrollY);
         window.addEventListener('scroll', onScroll);
         return () => window.removeEventListener('scroll', onScroll);
-      }, []);
-      useEffect(() => {
+    }, []);
+    useEffect(() => {
         if (height > 40) {
-          setView(true)
-        } 
-        else{
-          setView(false)            
+            setView(true)
         }
-      },[height]);
+        else {
+            setView(false)
+        }
+    }, [height]);
+    // this for the story
+    const students = [
+        {
+            image: std1,
+            nam: "Bhahirathan M",
+            company: "Minar Soft",
+            course: "Junior Software Developer",
+            c_logo: com1,
+            class: "box1",
+        },
+        {
+            image: std2,
+            nam: "Monika .G",
+            company: "staar homes",
+            course: "Digital marketing Executive",
+            c_logo: com2,
+            class: "box2"
+        },
+        {
+            image: std3,
+            nam: "Tharun .S",
+            company: "Code99 IT Academy",
+            course: "marketing analyst",
+            c_logo: com3,
+            class: "box3",
+        },
+        {
+            image: std4,
+            nam: "Mohamed Sheik Abdul Khader .A ",
+            company: "digidaly",
+            course: "google ads",
+            c_logo: com4,
+            class: 'box4'
+        },
+        {
+            image: std5,
+            nam: "Mathan Karthik .A ",
+            company: "maynee",
+            course: "ads manger",
+            c_logo: com5
+        },
+        {
+            image: std6,
+            nam: "ASIYA RYHANA .A",
+            company: "UltraGITS",
+            course: "Digital Marketing Executive",
+            c_logo: com6,
+            class: "box6",
+        },
+        {
+            image: std7,
+            nam: "Arivarasu .T",
+            company: "cloverbridge technologies pvt ltd.",
+            course: "python developer",
+            c_logo: com7,
+            class: "box7",
+        },
+        {
+            image: std8,
+            nam: "Geetha .S",
+            company: "Kriha IT Solutions",
+            course: "Front-End developer",
+            c_logo: com8
+        },
+        {
+            image: std9,
+            nam: "Ashwini M",
+            company: "calsoft",
+            course: "full stack Python",
+            c_logo: com9,
+            class: "box9",
+        },
+        {
+            image: std10,
+            nam: "Balaji .M",
+            company: "Aspire systems",
+            course: "Software Trainee",
+            c_logo: com10
+        },
+        {
+            image: std11,
+            nam: "Harish Ragavendira .M",
+            company: "izeon innovative",
+            course: "web Development Trainee",
+            c_logo: com11,
+            class: "box11",
+        },
+        {
+            image: std12,
+            nam: "Hariharan .S",
+            company: "The Atom",
+            course: "Full stack developer",
+            c_logo: com12,
+            class: "box12",
+        },
+        {
+            image: std13,
+            nam: "Prabakaran .S",
+            company: "Shortfundly",
+            course: "Web Developer",
+            c_logo: com13,
+        },
+        {
+            image: std14,
+            nam: "Ramji.R",
+            company: "Northern IT Limited Services",
+            course: "Customer Care Executive",
+            c_logo: com14
+        },
+        {
+            image: std15,
+            nam: "Sriram.S",
+            company: "Code99 IT Academy",
+            course: "UI/UX design",
+            c_logo: com3,
+            class: "box3",
+        },
+        {
+            image: std16,
+            nam: "Sneka.M",
+            company: "DHL Information Technology Services",
+            course: "Software Developer",
+            c_logo: com16,
+
+        },
+        {
+            image: std17,
+            nam: "Mohamed Inamul Haq",
+            company: "Minar Soft",
+            course: "Junior Software Developer",
+            c_logo: com1,
+            class: "box1",
+
+        },
+        {
+            image: std18,
+            nam: "Faaik.A.K",
+            company: "HCLTechnologies",
+            course: "Arabic process associate",
+            c_logo: com18
+        },
+        {
+            image: std19,
+            nam: "Gowtham.R",
+            company: "zidio development",
+            course: "full stack web developer",
+            c_logo: com19
+        },
+        {
+            image: std20,
+            nam: "Shenbaga Devi.C",
+            company: "The Pomegranates",
+            course: "Google Ads Specialist",
+            c_logo: com20,
+            class: "box20"
+        },
+        {
+            image: std21,
+            nam: "Joel Alan.J",
+            company: "Aditya Birla Capital",
+            course: "Digital marketing executive",
+            c_logo: com21
+        },
+        {
+            image: std22,
+            nam: "Moorthy Sivabalan.B",
+            company: "CognitiveMobile Technology Pvt. Ltd.",
+            course: "Associate Software Engineer",
+            c_logo: com22,
+            class: "box22"
+        },
+        {
+            image: std23,
+            nam: "Mohammed Farook Imran.T.N",
+            company: "Minar Soft",
+            course: "Software developer role",
+            c_logo: com1,
+            class: "box1",
+        },
+    ]
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const scrollRef = useRef(null);
+    const studentRefs = useRef([]); // 👈 array of refs for each student div
+    const selectedImage = students[currentIndex].image;
+
+    // 👉 When image is clicked
+    const handleImageClick = (index) => {
+        setCurrentIndex(index);
+
+        // 👇 Scroll selected item into view
+        studentRefs.current[index]?.scrollIntoView({
+            behavior: 'smooth',
+            inline: 'center',
+            block: 'nearest'
+        });
+    };
+
+    // 👉 Left button
+    const handlePrev = () => {
+        const newIndex = currentIndex === 0 ? students.length - 1 : currentIndex - 1;
+        setCurrentIndex(newIndex);
+        studentRefs.current[newIndex]?.scrollIntoView({
+            behavior: 'smooth',
+            inline: 'center',
+            block: 'nearest'
+        });
+    };
+
+    // 👉 Right button
+    const handleNext = () => {
+        const newIndex = (currentIndex + 1) % students.length;
+        setCurrentIndex(newIndex);
+        studentRefs.current[newIndex]?.scrollIntoView({
+            behavior: 'smooth',
+            inline: 'center',
+            block: 'nearest'
+        });
+    };
+
+    //  Auto change
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            const newIndex = (prev => (prev + 1) % students.length)(currentIndex);
+            setCurrentIndex(newIndex);
+
+            const container = scrollRef.current;
+            const target = studentRefs.current[newIndex];
+
+            if (container && target) {
+                container.scrollTo({
+                    left: target.offsetLeft - container.offsetLeft,
+                    behavior: 'smooth'
+                });
+            }
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, [currentIndex]);
+
     return (
         <>
             <main>
@@ -362,7 +606,7 @@ export default function Land_page() {
                     {/* this for the student placement*/}
                     <div id="placement" className="s-place title center">
                         {/* this for the icon */}
-                        <div className={`w-icon ${view ? "view" :'' }`}>
+                        <div className={`w-icon ${view ? "view" : ''}`}>
                             <a href="#"> <img src={Uper} alt="icon" /></a>
                         </div>
                         <h1>student placement</h1>
@@ -374,59 +618,74 @@ export default function Land_page() {
                     </div>
                     {/* -------------------------------------------------------------------------------- */}
                     {/* this for the student story */}
-                    <div className="story full center title">
-                        <h1>student success stories</h1>
-                        <div className="s-cover center">
-                            {/* this for the main pic */}
-                            <div className="main-pic pic-box center">
-                                <div className="pic-holder">
-                                    <img src={currentpic} alt="" />
-                                </div>
-                            </div>
-                            {/* this for the sub-pic*/}
-                            <div className="sub-pic pic-box center">
-                                <h3>Real Stories, Real Success</h3>
-                                <div className="min-holder center">
-                                    <Slider className="sm-pic" {...settings}>
-                                        {yt.map((items) => {
-                                            return (
-                                                <>
-                                                    <div className="min-card">
-                                                        <img src={items.pic} alt="story of student" />
-                                                    </div>
-                                                </>
-                                            )
-                                        })}
-                                    </Slider>
-                                </div>
-                            </div>
-                            {/* ______________________________ */}
+                    <div className="three">
+                        <div className="three-top">
+                            <h1 className="title">Student Success Stories</h1>
                         </div>
-                        <div className="btn-run center">
-                            <div className="top-btn r-btn center">
-                                {arr.map((items) => {
-                                    return (
-                                        <>
-                                           <div className="com-logo">
-                                             <img src={items.company} alt="company logo" />
-                                           </div>
-                                        </>
-                                    )
-                                })}
+
+                        <div className="three-bottom">
+                            <div className="three-left">
+                                <div>
+                                    <img src={students[currentIndex].image} alt="Selected Student" />
+                                </div>
                             </div>
-                            <div className="bot-btn r-btn center">
-                                {arr2.map((items) => {
-                                    return (
-                                        <>
-                                           <div className="com-logo">
-                                             <img src={items.company} alt="company logo" />
-                                           </div>
-                                        </>
-                                    )
-                                })}
+
+                            <div className="three-right">
+                                <h1>Real Stories, Real Success</h1>
+
+                                <div className="three-right-flex">
+                                    <button className="btn" onClick={handlePrev}>
+                                        <span><img src={prev} alt=""/></span>
+                                    </button>
+
+                                    {/* Horizontal scroll container with styles */}
+                                    <div
+                                        className="txt"
+                                        ref={scrollRef}
+                                        style={{
+                                            overflowX: 'auto',
+                                            whiteSpace: 'nowrap',
+                                            scrollBehavior: 'smooth',
+                                            display: 'flex',
+                                            maxWidth: '100%',
+                                            scrollSnapType: 'x mandatory',
+                                        }}
+                                    >
+                                        {students.map((student, index) => (
+                                            <div
+                                                key={student.id}
+                                                ref={(el) => studentRefs.current[index] = el}
+                                                onClick={() => handleImageClick(index)}
+                                                style={{
+                                                    display: 'inline-block',
+                                                    margin: '0 10px',
+                                                    width: '120px', // image width
+                                                    scrollSnapAlign: 'start',
+                                                    border: index === currentIndex ? '2px  solid rgb(53, 217, 3)' : 'none'
+                                                }}
+                                            >
+                                                <img
+                                                    src={student.image}
+                                                    alt={student.nam}
+                                                    style={{
+                                                        width: '100%',
+                                                        height: '100px',
+                                                        objectFit: 'cover',
+                                                        borderRadius: '8px'
+                                                    }}
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    <button className="btn" onClick={handleNext}>
+                                        <span><img src={next} alt="" /></span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                     {/*-------------------------------------------------------------------------------------------- */}
                     {/* this for the review */}
                     <Review />
@@ -457,7 +716,7 @@ export default function Land_page() {
                             {vid.map((item) => {
                                 return (
                                     <>
-                                        <div className={`v-holder ${video ? 'animet' : ""}`} onMouseEnter={()=>setVideo(true)} onMouseLeave={()=>setVideo(false)}>
+                                        <div className={`v-holder ${video ? 'animet' : ""}`} onMouseEnter={() => setVideo(true)} onMouseLeave={() => setVideo(false)}>
                                             <img src={item.pic} alt="insta video" />
                                         </div>
                                     </>
@@ -478,7 +737,7 @@ export default function Land_page() {
                     {/* --------------------------------------------------- */}
                     {/* this for the contact us */}
                     <div id="contact" className="full contact-us center">
-                       <Form_card/>
+                        <Form_card />
                     </div>
                     {/* this for the footer*/}
                 </section>

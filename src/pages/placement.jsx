@@ -44,7 +44,6 @@ import com20 from '../images/c-20.png';
 import com21 from '../images/c-21.png';
 import com22 from '../images/c-22.png';
 
-
 export default function Placement() {
     const details = [
         {

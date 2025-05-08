@@ -21,7 +21,7 @@ export default function Footer() {
     const text = document.querySelector(".text");
     const isMobile = window.innerWidth < 768; // Common mobile breakpoint
     
-    if ((!isMobile && height >= 5500) || (isMobile && height >= 4760)) {
+    if ((!isMobile && height >= 5300) || (isMobile && height >= 4760)) {
         text?.classList.add("act");
         console.log("im one",isMobile)
     } else {
