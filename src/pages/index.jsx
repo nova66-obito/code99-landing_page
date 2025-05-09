@@ -604,7 +604,7 @@ export default function Land_page() {
                         </Carousel>
                     </div>
                     {/* this for the student placement*/}
-                    <div id="placement" className="s-place title center">
+                    <div id="placement" className="s-place full title center">
                         {/* this for the icon */}
                         <div className={`w-icon ${view ? "view" : ''}`}>
                             <a href="#"> <img src={Uper} alt="icon" /></a>
