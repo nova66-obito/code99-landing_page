@@ -147,7 +147,7 @@
   p{
     font-size: 15px;
   }
-}
-@media only screen and (max-width:900px) and (min-width:650px){
-  
+  .star svg{
+    font-size: 23px;
+  }
 }

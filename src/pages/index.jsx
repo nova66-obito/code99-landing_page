@@ -653,6 +653,7 @@ export default function Land_page() {
                                     >
                                         {students.map((student, index) => (
                                             <div
+                                                className="s-pic-holder"
                                                 key={student.id}
                                                 ref={(el) => studentRefs.current[index] = el}
                                                 onClick={() => handleImageClick(index)}
@@ -682,6 +683,31 @@ export default function Land_page() {
                                         <span><img src={next} alt="" /></span>
                                     </button>
                                 </div>
+                            </div>
+                        </div>
+                       {/* this for the company logo */}
+                            <div className="btn-run center">
+                            <div className="top-btn r-btn center">
+                                {arr.map((items) => {
+                                    return (
+                                        <>
+                                           <div className="com-logo">
+                                             <img src={items.company} alt="company logo" />
+                                           </div>
+                                        </>
+                                    )
+                                })}
+                            </div>
+                            <div className="bot-btn r-btn center">
+                                {arr2.map((items) => {
+                                    return (
+                                        <>
+                                           <div className="com-logo">
+                                             <img src={items.company} alt="company logo" />
+                                           </div>
+                                        </>
+                                    )
+                                })}
                             </div>
                         </div>
                     </div>

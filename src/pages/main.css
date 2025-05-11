@@ -236,6 +236,7 @@ main{
     flex-direction: column;
     gap: 14px;
     overflow: hidden;
+    margin-top: 30px;
 }
 .r-btn{
     gap: 20px;
@@ -245,7 +246,7 @@ main{
   width: 150px;
   height: 60px;
   background:white;
-  box-shadow: 0px 0px 3px black;
+  box-shadow: 0px 0px 2px black;
 }
 .com-logo > img{
     width: 100%;
@@ -262,7 +263,7 @@ main{
         transform: translateX(10%);
     }
     100%{
-        transform: translatex(-1%);
+        transform: translatex(0%);
     }
 }
 .bot-btn{
@@ -273,7 +274,7 @@ main{
         transform: translateX(-10%);
     }
     100%{
-        transform: translateX(1%);
+        transform: translateX(0%);
     }
 }
 /* why choose us */
@@ -362,7 +363,7 @@ main{
         transform: translateX(0px);
     }
     to{
-       transform: translateX(-2500px);
+       transform: translateX(-2800px);
     }
 }
 .animet{
@@ -546,10 +547,18 @@ select > option{
    text-transform: uppercase;
    font-weight: bolder;    
 }
+.f-icon{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--title);
+    position: relative;
+    right: 10px;
+}
 /* this for the success */
 .success{
     width: 100%;
-    background:rgb(164, 160, 160,0.4);
+    background:rgba(247, 247, 247, 0.7);
     height: 100vh;
     border-radius: 10px;
 }
@@ -746,6 +755,9 @@ footer{
      .r-btn > .com-logo {
         width: 100px;
         height: 40px;
+    }
+    .btn-run{
+        margin-top: 5px;
     }
     /* this for the choose */
     form {
@@ -1010,7 +1022,7 @@ footer{
         width: 30%;
      }
     .swiper{
-        height: 75vh !important;
+        height: 120vh !important;
     }
 
 }

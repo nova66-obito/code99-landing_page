@@ -44,7 +44,7 @@ export default function Slider() {
             <SwiperSlide>
               <div className='star'> {arr.map((item) => {
                 return (
-                  <FaStar />
+                  <FaStar  className="stat-i"/>
                 )
               })}  </div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quis in unde? Mollitia vel qui reiciendis incidunt minima similique corrupti.</p>
@@ -54,7 +54,7 @@ export default function Slider() {
               <div className='star'>
                 {arr.map((item) => {
                   return (
-                    <FaStar />
+                    <FaStar  className="stat-i"/>
                   )
                 })}
               </div>
@@ -65,7 +65,7 @@ export default function Slider() {
               <div className='star'>
                 {arr.map((item) => {
                   return (
-                    <FaStar />
+                    <FaStar  className="stat-i"/>
                   )
                 })}
               </div>
@@ -76,7 +76,7 @@ export default function Slider() {
               <div className='star'>
                 {arr.map((item) => {
                   return (
-                    <FaStar />
+                    <FaStar className="stat-i"/>
                   )
                 })}
               </div>
@@ -87,7 +87,7 @@ export default function Slider() {
               <div className='star'>
                 {arr.map((item) => {
                   return (
-                    <FaStar />
+                    <FaStar  className="stat-i"/>
                   )
                 })}
               </div>
@@ -98,7 +98,7 @@ export default function Slider() {
               <div className='star'>
                 {arr.map((item) => {
                   return (
-                    <FaStar />
+                    <FaStar  className="stat-i"/>
                   )
                 })}
               </div>
@@ -108,7 +108,7 @@ export default function Slider() {
             <SwiperSlide>
               <div className='star'>{arr.map((item) => {
                 return (
-                  <FaStar />
+                  <FaStar  className="stat-i"/>
                 )
               })} </div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quis in unde? Mollitia vel qui reiciendis incidunt minima similique corrupti.</p>

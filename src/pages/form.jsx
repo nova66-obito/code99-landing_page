@@ -117,9 +117,9 @@ export default function Form_card() {
                                 <label className={`lab ${message ? 'top' : ''}`} htmlFor="message">message*</label>
                                 {messageError && <p>{messageError}</p>}
                             </div>
-                            <div className="f-btn nav-block">
+                            <div className="f-btn">
                                 <button>submit</button>
-                                <span><CgArrowTopRight style={{ fontSize: "25px", fontWeight: 'bolder' }} /></span>
+                                <span><CgArrowTopRight className="f-icon" style={{ fontSize: "25px", fontWeight: 'bolder' }} /></span>
                             </div>
                         </form>
                     </div>

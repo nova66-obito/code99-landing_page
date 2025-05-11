@@ -47,7 +47,7 @@
 }
 
 .three-right {
-    width: 50%;
+    width: 58%;
     padding: 20px;
     align-content: center;
 
@@ -150,8 +150,14 @@
 
     .three-right {
         width: 100%;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-
+    .three-right-flex {
+    width: 95%;
+}
     .three-left div img {
         width: 280px;
     }
@@ -171,6 +177,18 @@
     .three-top h1 {
         font-size: 32px;
     }
+    .txt div {
+        min-width: 66px;
+        height: 80px;
+    }
+    .btn span{
+        padding: 12px;
+    }
+    .btn > span > img {
+        width: 12px;
+        height: 12px;
+    }
+
 }
 
 @media only screen and (min-width:320px) and (max-width:425px) {

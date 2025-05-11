@@ -51,7 +51,7 @@ let clck = (call) => {
                   <div className={`nav-block center nav-block2 ${active ? 'active' : null}`}>
                        <a href="#why"  onClick={() => clck("1")} className={`${show2 == 'one' ? "cl1" : null }`} ><FaEarthEurope /> why us</a>
                        <a href="#course"  onClick={() => clck("2")} className={`${show2 == 'two' ? "cl1" : null }`}><FaBookBookmark /> course</a>
-                       <a href="#review"  onClick={() => clck("3")} className={`${show2 == 'three' ? "cl1" : null }`}><MdReviews /> Reviews</a>
+                       <a href="#reviews"  onClick={() => clck("3")} className={`${show2 == 'three' ? "cl1" : null }`}><MdReviews /> Reviews</a>
                        <a href="#contact"  onClick={() => clck("4")} className={`${show2 == 'four' ? "cl1" : null }`}><IoMdContact/> contact us</a>
                        <a href="#placement"  onClick={() => clck("5")} className={`${show2 == 'five' ? "cl1" : null }`}><FaMedal/>placement</a>
                        <button>get in touch</button>
